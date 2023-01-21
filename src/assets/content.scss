@@ -1,0 +1,25 @@
+@import 'breakpoints';
+
+@mixin content-width {
+  width: $mobile-width - 350px;
+
+  @media(min-width: $mobile-width)  {
+    width: $mobile-width - 150px;
+  }
+
+  @media(min-width: $tablet-width)  {
+    width: $tablet-width - 200px;
+  }
+
+  @media(min-width: $desktop-width)  {
+    width: $desktop-width - 200px;
+  }
+
+  @media(min-width: $large-desktop-width)  {
+    width: $large-desktop-width - 200px;
+  }
+
+  @media(min-width: $larger-desktop-width)  {
+    width: $larger-desktop-width - 400px;
+  }
+}

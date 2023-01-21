@@ -1,11 +1,11 @@
 import { api } from '@/api/index';
 
-export const getEntries = () =>
+export const getEntries = (rubric, { page, pageSize = 10 }) =>
     api
-        .get('/entry', {
+        .get(`/rubric/${rubric}/entries`, {
             params: {
-                page: '1',
-                pageSize: '20',
+                page,
+                pageSize,
             },
         })
         .then(data => data);

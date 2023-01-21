@@ -12,8 +12,8 @@
     "plugins": ["vue"],
     "rules": {
         "allowSingleLine": true,
+        "space-in-brackets": ["error", "always"],
         "indent": ["error", "tab"],
-        "brace-style": ["error", "1tbs"],
         "linebreak-style": ["error", "unix"],
         "quotes": ["error", "single"],
         "semi": ["error", "always"]

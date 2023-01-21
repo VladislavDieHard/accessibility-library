@@ -1,21 +1,33 @@
 <template>
-    <div>
-        <h2 class="text-3xl font-bold underline">MainPage</h2>
-        <div v-for="{ id, title } in entries" :key="id">
-            {{ title }}
-        </div>
-    </div>
+  <div class="home">
+    <v-container class="home--content">
+      <h1>Новости</h1>
+      <div class="v-divider mt-4 mb-6"></div>
+      <rubrics class="mb-4" v-model="rubric"/>
+      <entries :rubric="rubric"/>
+    </v-container>
+  </div>
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue';
-import { getEntries } from '@/api/entry';
+import Rubrics from '@/components/Rubrics.vue'
+import Entries from '@/components/Entries.vue'
+import {ref} from "vue";
 
-const entries = ref({});
-
-onMounted(async () => {
-    const { data } = await getEntries();
-
-    entries.value = data;
-});
+const rubric = ref('aktualnoe');
 </script>
+
+<style lang="scss" scoped>
+.home {
+  display: flex;
+  flex-direction: column;
+
+  &--content {
+    margin-top: 150px;
+  }
+
+  &--rubrics {
+    margin-bottom: 40px;
+  }
+}
+</style>

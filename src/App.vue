@@ -1,12 +1,21 @@
 <template>
-    <header-layout />
-    <main>
+    <div class="app-container black-yellow">
+      <header-layout />
+      <main class="content">
         <router-view />
-    </main>
+      </main>
+    </div>
 </template>
 
 <script setup>
-import HeaderLayout from '@/components/HeaderLayout.vue';
+import HeaderLayout from '@/components/base/Header.vue';
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+@import 'assets/content';
+
+.content {
+  @include content-width;
+  margin: 0 auto;
+}
+</style>
