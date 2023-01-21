@@ -11,6 +11,7 @@ body {
         background-color: white;
         @include btn(white, black);
         @include titles-color(black);
+        @include checkbox(black, white);
         color: black;
 
         .header {
@@ -22,6 +23,7 @@ body {
         background-color: black;
         @include btn(black, white);
         @include titles-color(white);
+        @include checkbox(white, black);
         color: white;
 
         .header {
@@ -32,7 +34,7 @@ body {
     &.black-yellow {
         background-color: black;
         @include btn(black, yellow);
-        @include titles-color(yellow);
+        @include checkbox(yellow, black);
         color: yellow;
 
         .header {
@@ -41,14 +43,33 @@ body {
     }
 
     &.small-text {
-        @include titles-size(0.5rem);
+        @include titles-size(1rem);
+        @include entry-text(1rem);
     }
 
     &.medium-text {
-        @include titles-size(1rem);
+        @include titles-size(1.5rem);
+        @include entry-text(1.5rem);
     }
 
     &.large-text {
-        @include titles-size(1.5rem);
+        @include titles-size(2rem);
+        @include entry-text(2rem);
+    }
+}
+
+.image-black {
+    img {
+        filter: grayscale(100%);
+    }
+}
+
+.image-showed {
+    img {
+        display: none;
+    }
+
+    .switch-image {
+        display: none;
     }
 }

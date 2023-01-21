@@ -10,4 +10,21 @@ export default defineConfig({
             '@': path.resolve(__dirname, './src'),
         },
     },
+    server: {
+        proxy: {
+            '/site': {
+                target: 'http://static.infomania.ru/',
+                changeOrigin: true,
+            },
+            '/media': {
+                target: 'http://static.infomania.ru/site',
+                changeOrigin: true,
+            },
+            '/news': {
+                target: 'http://dev.infomania.ru/',
+                changeOrigin: true,
+                rewrite: path => path.replace(/^\/entry/, ''),
+            },
+        },
+    },
 });

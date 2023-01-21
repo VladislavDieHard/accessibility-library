@@ -1,9 +1,9 @@
 <template>
     <div class="app-container black-yellow">
-      <header-layout />
-      <main class="content">
-        <router-view />
-      </main>
+        <header-layout />
+        <main class="content">
+            <router-view />
+        </main>
     </div>
 </template>
 
@@ -15,7 +15,7 @@ import HeaderLayout from '@/components/base/Header.vue';
 @import 'assets/content';
 
 .content {
-  @include content-width;
-  margin: 0 auto;
+    @include content-width;
+    margin: 0 auto;
 }
 </style>
