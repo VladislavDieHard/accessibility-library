@@ -5,7 +5,9 @@
             <img src="@/assets/images/base-img.svg" alt="" v-else />
         </div>
         <div class="entry-container--content">
-            <h3 class="mb-2">{{ entry.title }}</h3>
+            <router-link :to="`/entry/${entry.slug}`">
+                <h3 class="mb-2">{{ entry.title }}</h3>
+            </router-link>
             <div v-html="entry.desc" class="entry-content"></div>
         </div>
     </div>

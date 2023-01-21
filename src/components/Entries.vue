@@ -72,9 +72,11 @@ const fetchEntries = async () => {
     entries.value.push(...data);
 };
 
+const loadData = throttle(checkPosition, 250);
+
 onMounted(() => {
-    document.addEventListener('scroll', throttle(checkPosition, 250));
-    document.addEventListener('resize', throttle(checkPosition, 250));
+    document.addEventListener('scroll', loadData);
+    document.addEventListener('resize', loadData);
 });
 
 onBeforeMount(async () => {
@@ -82,8 +84,8 @@ onBeforeMount(async () => {
 });
 
 onBeforeUnmount(() => {
-    document.removeEventListener('scroll', throttle(checkPosition, 250));
-    document.removeEventListener('resize', throttle(checkPosition, 250));
+    document.removeEventListener('scroll', loadData);
+    document.removeEventListener('resize', loadData);
 });
 </script>
 

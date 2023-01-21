@@ -7,5 +7,10 @@ export const router = createRouter({
             path: '/',
             component: () => import('@/pages/Home.vue'),
         },
+        {
+            path: '/entry/:slug',
+            name: 'Entry',
+            component: () => import('@/pages/EntryDetail.vue'),
+        },
     ],
 });
