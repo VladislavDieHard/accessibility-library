@@ -1,12 +1,13 @@
 import { api } from '@/api/index';
 
-export const getEntries = (rubric, { page, pageSize = 10, include }) =>
+export const getEntries = (rubric, { page, pageSize = 10, include, orderBy }) =>
     api
         .get(`/rubric/${rubric}/entries`, {
             params: {
                 page,
                 pageSize,
                 include,
+                orderBy,
             },
         })
         .then(data => data);

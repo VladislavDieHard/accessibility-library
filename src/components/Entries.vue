@@ -66,6 +66,7 @@ const fetchEntries = async () => {
     const { data } = await getEntries(props.rubric, {
         page: currentPage.value,
         include: 'preview',
+        orderBy: '-publishedAt',
     });
 
     currentPage.value++;
