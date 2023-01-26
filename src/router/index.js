@@ -5,11 +5,17 @@ export const router = createRouter({
     routes: [
         {
             path: '/',
+            name: 'Home',
             component: () => import('@/pages/Home.vue'),
         },
         {
+            path: '/documents',
+            name: 'Documents',
+            component: () => import('@/pages/Documents.vue'),
+        },
+        {
             path: '/entry/:slug',
-            name: 'Entry',
+            name: 'EntryDetail',
             component: () => import('@/pages/EntryDetail.vue'),
         },
     ],

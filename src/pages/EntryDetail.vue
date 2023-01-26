@@ -1,7 +1,9 @@
 <template>
     <v-container class="entry-container">
         <div class="entry-container--content">
-            <div class="entry-container--publish entry-content">{{ entryDate }}</div>
+            <div class="entry-container--publish entry-content">
+                {{ entryDate }}
+            </div>
             <button class="btn py-2 px-6 mb-4" @click="handleBackHome">
                 {{ '< Назад' }}
             </button>

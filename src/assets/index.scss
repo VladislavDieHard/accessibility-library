@@ -1,4 +1,5 @@
 @import 'mixins';
+@import 'transitions';
 
 * {
     padding: 0;
@@ -12,7 +13,12 @@ body {
         @include btn(white, black);
         @include titles-color(black);
         @include checkbox(black, white);
+        @include icon-color(black);
+        @include linkHover(white, black);
         color: black;
+        a {
+            color: black;
+        }
 
         .header {
             background-color: white;
@@ -24,7 +30,12 @@ body {
         @include btn(black, white);
         @include titles-color(white);
         @include checkbox(white, black);
+        @include icon-color(white);
+        @include linkHover(black, white);
         color: white;
+        a {
+            color: white;
+        }
 
         .header {
             background-color: black;
@@ -35,7 +46,12 @@ body {
         background-color: black;
         @include btn(black, yellow);
         @include checkbox(yellow, black);
+        @include icon-color(yellow);
+        @include linkHover(black, yellow);
         color: yellow;
+        a {
+            color: yellow;
+        }
 
         .header {
             background-color: black;
@@ -76,4 +92,13 @@ body {
 
 .image_resized {
     width: 250px !important;
+}
+
+a,
+a:link,
+a:visited,
+a:active,
+a:hover {
+    text-decoration: none !important;
+    border: 0 !important;
 }

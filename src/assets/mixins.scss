@@ -41,9 +41,25 @@
     }
 }
 
+@mixin icon-color($color) {
+    .icon {
+        fill: $color;
+    }
+}
+
 @mixin entry-text($text-size) {
     .entry-content {
         font-size: $text-size;
+    }
+}
+
+@mixin linkHover($primary-color, $secondary-color) {
+    h3 {
+        &:hover {
+            background-color: $secondary-color;
+            color: $primary-color;
+            transition: all 0.2s;
+        }
     }
 }
 
