@@ -55,6 +55,7 @@
 
 @mixin linkHover($primary-color, $secondary-color) {
     h3 {
+        display: inherit;
         &:hover {
             background-color: $secondary-color;
             color: $primary-color;
@@ -71,15 +72,15 @@
 
 @mixin titles-size($size) {
     h1 {
-        font-size: $size * 1.8 !important;
+        font-size: $size * 1.9 !important;
     }
 
     h2 {
-        font-size: $size * 1.6 !important;
+        font-size: $size * 1.8 !important;
     }
 
     h3 {
-        font-size: $size * 1.4 !important;
+        font-size: $size * 1.5 !important;
     }
 
     h4 {
@@ -88,5 +89,21 @@
 
     h5 {
         font-size: $size !important;
+    }
+}
+
+@mixin document-hover($primary-color, $secondary-color) {
+    .document-item {
+        &:hover {
+            background-color: $secondary-color;
+            color: $primary-color;
+            transition: all 0.2s;
+        }
+    }
+}
+
+@mixin document-text-size($text-size) {
+    .document-item {
+        font-size: $text-size;
     }
 }

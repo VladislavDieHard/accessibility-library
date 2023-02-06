@@ -21,16 +21,15 @@ import { useRoute, useRouter } from 'vue-router';
 import { computed, onBeforeMount, ref } from 'vue';
 import { getEntry } from '@/api/entry';
 import moment from 'moment';
+import { useTitle } from '@vueuse/core';
 
 const route = useRoute();
 const router = useRouter();
 const slug = computed(() => route.params.slug);
 const entry = ref({});
-const entryDate = computed(() => {
-    const date = moment(new Date(entry.value.publishedAt));
-
-    return date.format('Дата: DD-MM-YYYY, Время: hh:mm');
-});
+const entryDate = computed(() =>
+    moment(new Date(entry.value.publishedAt)).format('Дата: DD.MM.YYYY')
+);
 
 const handleBackHome = () => {
     router.push('/');
@@ -38,6 +37,7 @@ const handleBackHome = () => {
 
 onBeforeMount(async () => {
     entry.value = await getEntry(slug.value, {});
+    useTitle(`НОМБ - ${entry.value.title}`);
 });
 </script>
 

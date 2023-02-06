@@ -15,6 +15,7 @@ body {
         @include checkbox(black, white);
         @include icon-color(black);
         @include linkHover(white, black);
+        @include document-hover(white, black);
         color: black;
         a {
             color: black;
@@ -32,6 +33,7 @@ body {
         @include checkbox(white, black);
         @include icon-color(white);
         @include linkHover(black, white);
+        @include document-hover(black, white);
         color: white;
         a {
             color: white;
@@ -48,6 +50,7 @@ body {
         @include checkbox(yellow, black);
         @include icon-color(yellow);
         @include linkHover(black, yellow);
+        @include document-hover(black, yellow);
         color: yellow;
         a {
             color: yellow;
@@ -61,16 +64,19 @@ body {
     &.small-text {
         @include titles-size(1rem);
         @include entry-text(1rem);
+        @include document-text-size(1.5rem);
     }
 
     &.medium-text {
         @include titles-size(1.5rem);
         @include entry-text(1.5rem);
+        @include document-text-size(2rem);
     }
 
     &.large-text {
         @include titles-size(2rem);
         @include entry-text(2rem);
+        @include document-text-size(2.5rem);
     }
 }
 

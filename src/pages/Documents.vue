@@ -12,9 +12,18 @@
                     <h1 class="text-decoration-underline">Документы</h1>
                 </v-col>
             </v-row>
+            <div class="v-divider mt-4 mb-6"></div>
+            <documents-list />
         </v-container>
     </div>
 </template>
+
+<script setup>
+import DocumentsList from '@/components/DocumetsList.vue';
+import { useTitle } from '@vueuse/core';
+
+useTitle('НОМБ - Версия сайта с улучшенной доступностью - ДОКУМЕНТЫ');
+</script>
 
 <style lang="scss" scoped>
 .documents-container {

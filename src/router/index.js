@@ -14,6 +14,11 @@ export const router = createRouter({
             component: () => import('@/pages/Documents.vue'),
         },
         {
+            path: '/document/:slug',
+            name: 'DocumentsDetail',
+            component: () => import('@/pages/DocumentsDetail.vue'),
+        },
+        {
             path: '/entry/:slug',
             name: 'EntryDetail',
             component: () => import('@/pages/EntryDetail.vue'),

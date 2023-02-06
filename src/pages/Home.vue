@@ -23,8 +23,11 @@
 import Rubrics from '@/components/Rubrics.vue';
 import Entries from '@/components/Entries.vue';
 import { ref } from 'vue';
+import { useTitle } from '@vueuse/core';
 
 const rubric = ref('aktualnoe');
+
+useTitle('НОМБ - Версия сайта с улучшенной доступностью - НОВОСТИ');
 </script>
 
 <style lang="scss" scoped>
