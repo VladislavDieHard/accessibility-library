@@ -1,6 +1,8 @@
 <template>
     <v-col md="3" class="size-control">
-        <h3 class="text-center size-control--title">Размер шрифта</h3>
+        <h3 class="text-center size-control--title title-color-exclude">
+            Размер шрифта
+        </h3>
         <v-row class="mt-2 justify-center">
             <v-col md="2" class="mx-2 d-flex justify-center">
                 <button

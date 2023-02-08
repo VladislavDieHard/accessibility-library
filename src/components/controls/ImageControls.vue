@@ -1,6 +1,6 @@
 <template>
     <v-col md="3" class="size-controls d-flex flex-column align-center">
-        <h3 class="size-controls--title">Изображения</h3>
+        <h3 class="size-controls--title title-color-exclude">Изображения</h3>
         <checkbox v-model="isImageBlack" class="ml-4">
             <span>Чёрно-белые изображения</span>
         </checkbox>

@@ -1,6 +1,8 @@
 <template>
     <v-col md="3" class="style-controls">
-        <h3 class="text-center style-controls--title">Цветовая схема</h3>
+        <h3 class="text-center style-controls--title title-color-exclude">
+            Цветовая схема
+        </h3>
         <v-row class="mt-2 justify-center">
             <v-col md="2" class="mx-2 d-flex justify-center">
                 <button

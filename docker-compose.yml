@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    image: vladdamage/accessibility-library
+    env_file:
+      - .env
+    ports:
+      - "3001:80"
