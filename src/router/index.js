@@ -25,3 +25,7 @@ export const router = createRouter({
         },
     ],
 });
+
+router.beforeEach(() => {
+    window.scrollTo(0, 0);
+});
