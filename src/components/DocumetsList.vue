@@ -1,6 +1,6 @@
 <template>
     <div class="documents-list">
-        <div
+        <section
             class="documents-list--item"
             v-if="documentsExists"
             v-for="({ title, menuItems }, index) in documents"
@@ -21,7 +21,7 @@
                     </p>
                 </li>
             </ol>
-        </div>
+        </section>
     </div>
 </template>
 
