@@ -82,17 +82,17 @@ body {
 
 .image-black {
     img {
-        filter: grayscale(100%);
+        filter: grayscale(100%) !important;
     }
 }
 
 .image-showed {
     img {
-        display: none;
+        display: none !important;
     }
 
     .switch-image {
-        display: none;
+        display: none !important;
     }
 }
 
